@@ -44,6 +44,8 @@ def extractData(newsList):
         news_list.append(source_list)\
             
      return news_list
+ 
+def newsdetail(title):
         
 
 
