@@ -65,6 +65,9 @@ def newsdetail(title):
         print('Connection Failed')
         
 def receive_results(articles_list):
+    
+    articles_results = []
+    for articles_item in articles_list:
 
 
     
