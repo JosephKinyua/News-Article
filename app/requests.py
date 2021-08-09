@@ -24,7 +24,14 @@ def get_sources(sources):
             if get_catergory_response['sources']:
                 news_list = get_catergory_response['sources']
                 news_data = extractData(news_list)
-                return news_data
+        return news_data
+    except urllib.error.URLError:
+        print('Connection Reset by peer')
+    except TypeError:
+        print('Too many Request to API. Wait for 24 hrs or Upgrade to Premium')
+def extractData(newsList):
+        
+
 
     
     
