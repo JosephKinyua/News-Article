@@ -11,7 +11,16 @@ def configure_request(app):
     base_url = app.config['NEWS_BASE_URL']
     detail_url = app.config['NEWS_DETAIL_URL']
     
-    def get_sources(sources):
+def get_sources(sources):
+    get_source_url = base_url.format(sources, api_key)
+    print(get_source_url)
+    try:
+        with urllib.request.urlopen(get_source_url) as url:
+            get_catergory_data = url.read()
+            get_catergory_response = json.loads(get_catergory_data)
+            
+            news_data = None
+
     
     
   
