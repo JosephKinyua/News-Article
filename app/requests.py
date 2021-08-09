@@ -74,7 +74,10 @@ def receive_results(articles_list):
         description = articles_item.get('description')
         urlToImage = articles_item.get('urlToImage')
         published = articles_item.get('publishedAt')
-
+        
+        news_article = Article(url,author, title, description, urlToImage, published)
+        articles_results.append(news_article)
+    return articles_results
 
     
     
