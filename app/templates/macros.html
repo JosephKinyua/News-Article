@@ -1,0 +1,39 @@
+{% macro displayCatergory(catergories) %}
+<div class="wrapper d-flex">
+    {% for news in catergories %}
+    <div class="col-md-3 col-sm-6 item">
+        <div class="titleNews">
+            <h3>{{ news.name }}</h3>
+        </div>
+        <hr>
+        <p>{{ news.description|truncate(100) }}</p>
+        <hr>
+        <a href="/news/{{ news.id }}"><button class="btn btn-outline-success">View News</button></a>
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %} {% macro displayNews(channel) %}
+
+<div class="row">
+    {% for chan in channel %}
+    <div class="col-md-4 chan-card mt-2">
+        <div class="chad-crd text-center">
+            <p> {{ chan.title| truncate(50) }}</p>
+            <img src="{{ chan.urlToImage }}" alt="{{ chan.title|truncate(10)}}" class="img-fluid">
+            <div class="bg-white moreInfo">
+                <p>{{ chan.description}}</p>
+                <div>
+                    <p>By: {{ chan.author }}</p>
+                    <p>On: {{ chan.published }}</p>
+                </div>
+                <div class="text-center">
+                    <a href="{{chan.url}}"><button class="btn btn-outline-secondary mt-2">View Article</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endmacro %}

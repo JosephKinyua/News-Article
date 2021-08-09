@@ -5,6 +5,7 @@ class Source:
         self.description = description
         self.category = category
         self.url = url
+
 class Article:
     def __init__(self, url, author, title, description, urlToImage, published):
         self.url = url
@@ -13,4 +14,3 @@ class Article:
         self.description = description
         self.urlToImage = urlToImage
         self.published = published
-    
