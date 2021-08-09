@@ -20,6 +20,10 @@ def get_sources(sources):
             get_catergory_response = json.loads(get_catergory_data)
             
             news_data = None
+            
+            if get_catergory_response['sources']:
+                news_list = get_catergory_response['sources']
+                news_data = extractData(news_list)
 
     
     
