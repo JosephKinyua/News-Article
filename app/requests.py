@@ -40,6 +40,10 @@ def extractData(newsList):
         catergory = news.get('catergory')
         url = news.get('url')
         
+        source_list = Source(id, name, desc, catergory, url)
+        news_list.append(source_list)
+
+        
 
 
     
