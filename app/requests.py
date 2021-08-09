@@ -30,7 +30,15 @@ def get_sources(sources):
     except TypeError:
         print('Too many Request to API. Wait for 24 hrs or Upgrade to Premium')
 def extractData(newsList):
+    
      news_list = []
+     
+     for news in newsList:
+        id = news.get('id')
+        name = news.get('name')
+        desc = news.get('description')
+        catergory = news.get('catergory')
+        url = news.get('url')
         
 
 
