@@ -5,4 +5,5 @@ class Source:
         self.description = description
         self.category = category
         self.url = url
+class Article:
     
