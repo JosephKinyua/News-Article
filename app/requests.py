@@ -68,6 +68,12 @@ def receive_results(articles_list):
     
     articles_results = []
     for articles_item in articles_list:
+        url = articles_item.get('url')
+        author = articles_item.get('author')
+        title = articles_item.get('title')
+        description = articles_item.get('description')
+        urlToImage = articles_item.get('urlToImage')
+        published = articles_item.get('publishedAt')
 
 
     
