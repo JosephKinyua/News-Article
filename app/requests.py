@@ -46,6 +46,7 @@ def extractData(newsList):
      return news_list
  
 def newsdetail(title):
+    get_detail_url = detail_url.format(title, api_key)
         
 
 
