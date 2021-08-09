@@ -11,5 +11,7 @@ def configure_request(app):
     base_url = app.config['NEWS_BASE_URL']
     detail_url = app.config['NEWS_DETAIL_URL']
     
+    def get_sources(sources):
+    
     
   
