@@ -60,8 +60,11 @@ def newsdetail(title):
             articles_results_list = detail_data_response['articles']
             news_article = receive_results(articles_results_list)
 
-    return news_article
+        return news_article
+    except urllib.error.URLError:
+        print('Connection Failed')
         
+def receive_results(articles_list):
 
 
     
