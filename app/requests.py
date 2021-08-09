@@ -24,6 +24,7 @@ def get_sources(sources):
             if get_catergory_response['sources']:
                 news_list = get_catergory_response['sources']
                 news_data = extractData(news_list)
+                return news_data
 
     
     
