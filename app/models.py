@@ -6,11 +6,11 @@ class Source:
         self.category = category
         self.url = url
 class Article:
-    def __init__(self, url, author, title, description, urlimg, published):
+    def __init__(self, url, author, title, description, urlToImage, published):
         self.url = url
         self.author = author
         self.title = title
         self.description = description
-        self.urlimg = urlimg
+        self.urlToImage = urlToImage
         self.published = published
     
