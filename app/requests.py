@@ -47,6 +47,20 @@ def extractData(newsList):
  
 def newsdetail(title):
     get_detail_url = detail_url.format(title, api_key)
+    
+    try:
+        
+        with urllib.request.urlopen(get_detail_url) as url:
+            detail_data = url.read()
+            detail_data_response = json.loads(detail_data)
+
+        news_article = None
+
+        if detail_data_response['articles']:
+            articles_results_list = detail_data_response['articles']
+            news_article = receive_results(articles_results_list)
+
+    return news_article
         
 
 
