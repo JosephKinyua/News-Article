@@ -1,9 +1,9 @@
-{% macro displayCatergory(catergories) %}
+{% macro displayCategory(categories) %}
 <div>
-    {% for news in catergories %}
+    {% for news in categories %}
     <div class="col-md-4">
         <div>
-            <h3>{{ news.name }}</h3>
+            <li>{{ news.name }}</li>
         </div>
         <hr>
         <p>{{ news.description|truncate(100) }}</p>

@@ -16,13 +16,13 @@ def get_sources(sources):
   print(get_source_url)
   try:
     with urllib.request.urlopen(get_source_url) as url:
-      get_catergory_data = url.read()
-      get_catergory_response = json.loads(get_catergory_data)
+      get_category_data = url.read()
+      get_category_response = json.loads(get_category_data)
 
       news_data = None
 
-      if get_catergory_response['sources']:
-        news_list = get_catergory_response['sources']
+      if get_category_response['sources']:
+        news_list = get_category_response['sources']
         news_data = extractData(news_list)
     return news_data
 
@@ -39,10 +39,10 @@ def extractData(newsList):
     id = news.get('id')
     name = news.get('name')
     desc = news.get('description')
-    catergory = news.get('catergory')
+    category = news.get('category')
     url = news.get('url')
 
-    source_list = Source(id, name, desc, catergory, url)
+    source_list = Source(id, name, desc, category, url)
     news_list.append(source_list)
 
   return news_list
